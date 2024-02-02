@@ -1,0 +1,10 @@
+<script>
+function mostrarMenuDesplegable(elemento) {
+    var submenu = elemento.querySelector(".submenu");
+    if (submenu.style.display === "none") {
+        submenu.style.display = "block";
+    } else {
+        submenu.style.display = "none";
+    }
+}
+</script>
