@@ -12,12 +12,25 @@ header {
     left: 0;
     bottom: 0;
     width: 100%;
-    height: 10%;
-    background-color: red;
+    height: 80px;
+    background-color: rgb(64, 230, 14);
     color: black;
     text-align: center;
+    transition: transform 0.5s ease;
+    z-index: 100;
 }
+
+@media (min-scroll-y: 100px) {
+    .header {
+        transform: scale(0.8); /* Ajusta este valor al tamaño deseado */
+    }
+}
+
 /*Aqui empieza el body*/
+.main-body {
+    margin-top: 80px
+}
+
 body{
     flex-wrap: wrap;
     display: flex;
@@ -112,36 +125,16 @@ body{
     transform: perspective(600px) rotateY(360deg);
 }
 
-/* .tarjeta {
-    width: 300px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    padding: 10px;
-    margin: 10px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.5s ease;
-}
-
-.tarjeta:hover {
-    transform: scale(1.1);
-}
-
-.tarjeta img {
-    display: block;
-    margin: 10;
-    max-width: 100px;
+.whatsapp-btn {
+    width: 50px;
     height: auto;
 }
 
-.contenedor-imagenes {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-} */
+.telegram-btn{
+    width: 50px;
+    height: auto;
+}
+
 
 
 /* Estilo para el pie de página */
