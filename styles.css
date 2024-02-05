@@ -28,7 +28,8 @@ header {
 
 /*Aqui empieza el body*/
 .main-body {
-    margin-top: 80px
+    margin-top: 80px;
+    min-height: calc(100vh - 80px);
 }
 
 body{
@@ -134,8 +135,25 @@ body{
     width: 50px;
     height: auto;
 }
+/*Medias para diferentes dispositivos*/
+@media screen and (max-width: 768px) {
+    .contenedor-tarjetas {
+        flex-direction: column;
+    }
+}
 
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .contenedor-tarjetas {
+        flex-direction: row;
+    }
+}
 
+@media screen and (min-width: 1025px) {
+    .contenedor-tarjetas {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
 
 /* Estilo para el pie de página */
 footer {
@@ -146,4 +164,5 @@ footer {
     background-color: #0cc239;
     color: black;
     text-align: center;
+    z-index: 100;
 }
